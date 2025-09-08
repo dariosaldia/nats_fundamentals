@@ -1,0 +1,8 @@
+services:
+  nats:
+    container_name: nats
+    image: nats:2.10
+    ports:
+      - "4222:4222"
+      - "8222:8222"
+    command: ["-js"]   # enable JetStream

@@ -1,0 +1,10 @@
+[runtime]
+mode = "local"
+
+[nats]
+# Local NATS server URL (docker-compose runs this at 127.0.0.1:4222)
+url = "nats://127.0.0.1:4222"
+
+[recv]
+# Default wait time in seconds for subscribers (can be overridden per lab)
+wait_secs = 5

@@ -1,0 +1,23 @@
+[package]
+name = "shared"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = { workspace = true }
+async-nats = { workspace = true }
+clap = { workspace = true }
+config = { workspace = true }
+futures = { workspace = true }
+serde = { workspace = true }
+tokio = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+
+[[bin]]
+name = "nats-sub"
+path = "src/bin/nats-sub.rs"
+
+[[bin]]
+name = "nats-pub"
+path = "src/bin/nats-pub.rs"
