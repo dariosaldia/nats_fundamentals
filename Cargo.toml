@@ -1,5 +1,5 @@
 [workspace]
-members = ["labs/lab1_publish_subscribe", "shared"]
+members = ["labs/lab1_publish_subscribe", "labs/lab2_queue_groups", "shared"]
 resolver = "2"
 
 [workspace.dependencies]
@@ -12,3 +12,4 @@ serde = { version = "1.0.219", features = ["derive"] }
 tokio = { version = "1.47.1", features = ["macros", "rt-multi-thread"] }
 tracing = "0.1.41"
 tracing-subscriber = { version = "0.3.20", features = ["env-filter"] }
+hostname = "0.4"

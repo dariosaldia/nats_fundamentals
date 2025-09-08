@@ -1,0 +1,18 @@
+[package]
+name = "lab2_queue_groups"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+shared = { path = "../../shared" }
+anyhow = { workspace = true }
+clap = { workspace = true }
+futures = { workspace = true }
+tracing = { workspace = true }
+tokio = { workspace = true }
+async-nats = { workspace = true }
+hostname = { workspace = true }
+
+[[bin]]
+name = "worker"
+path = "src/bin/worker.rs"

@@ -1,0 +1,3 @@
+[nats]
+subject = "lab2.work"
+queue = "lab2-workers"

@@ -28,3 +28,9 @@ pub: guard-config
 	@if [ -z "$(MSG)" ]; then echo "Provide MSG=\"your message\""; exit 1; fi
 	cargo run --manifest-path shared/Cargo.toml --bin nats-pub -- \
 	  --config $(CONFIG) --lab-config $(LAB_DIR)/config.toml --msg "$(MSG)" $(ARGS)
+
+.PHONY: run
+run: guard-config
+	@if [ -z "$(BIN)" ]; then echo "Provide BIN=<binary_name>"; exit 1; fi
+	cargo run --manifest-path $(LAB_DIR)/Cargo.toml --bin $(BIN) -- \
+	  --config $(CONFIG) --lab-config $(LAB_DIR)/config.toml $(ARGS)
