@@ -1,5 +1,5 @@
 [workspace]
-members = ["labs/lab1_publish_subscribe", "labs/lab2_queue_groups", "shared"]
+members = ["labs/lab1_publish_subscribe", "labs/lab2_queue_groups", "labs/lab3_request_reply", "shared"]
 resolver = "2"
 
 [workspace.dependencies]

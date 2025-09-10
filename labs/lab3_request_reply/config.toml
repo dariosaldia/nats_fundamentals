@@ -1,0 +1,2 @@
+[nats]
+subject = "lab3.rpc"

@@ -1,0 +1,21 @@
+[package]
+name = "lab3_request_reply"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+shared = { path = "../../shared" }
+anyhow = { workspace = true }
+clap = { workspace = true }
+futures = { workspace = true }
+tracing = { workspace = true }
+tokio = { workspace = true }
+async-nats = { workspace = true }
+
+[[bin]]
+name = "responder"
+path = "src/bin/responder.rs"
+
+[[bin]]
+name = "requester"
+path = "src/bin/requester.rs"
