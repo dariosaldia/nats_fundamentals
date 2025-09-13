@@ -13,6 +13,8 @@ pub struct NatsConfig {
     pub url: Option<String>,
     pub subject: Option<String>,
     pub queue: Option<String>,
+    pub stream: Option<String>,
+    pub consumer: Option<String>,
 }
 
 #[derive(Debug, Clone, Deserialize, Default)]

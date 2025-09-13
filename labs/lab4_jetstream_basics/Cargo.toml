@@ -1,0 +1,29 @@
+[package]
+name = "lab4_jetstream_basics"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+shared = { path = "../../shared" }
+anyhow = { workspace = true }
+clap = { workspace = true }
+futures = { workspace = true }
+tracing = { workspace = true }
+tokio = { workspace = true }
+async-nats = { workspace = true }
+
+[[bin]]
+name = "js-bootstrap"
+path = "src/bin/js-bootstrap.rs"
+
+[[bin]]
+name = "js-pub"
+path = "src/bin/js-pub.rs"
+
+[[bin]]
+name = "js-pull"
+path = "src/bin/js-pull.rs"
+
+[[bin]]
+name = "js-purge"
+path = "src/bin/js-purge.rs"

@@ -32,5 +32,9 @@ pub: guard-config
 .PHONY: run
 run: guard-config
 	@if [ -z "$(BIN)" ]; then echo "Provide BIN=<binary_name>"; exit 1; fi
-	cargo run --manifest-path $(LAB_DIR)/Cargo.toml --bin $(BIN) -- \
-	  --config $(CONFIG) --lab-config $(LAB_DIR)/config.toml $(ARGS)
+	@set -- --config "$(CONFIG)" --lab-config "$(LAB_DIR)/config.toml"; \
+	if [ "$(BIN)" = "js-pub" ]; then \
+	  if [ -z "$(MSG)" ]; then echo "Provide MSG=\"your message\""; exit 1; fi; \
+	  set -- "$$@" --msg "$(MSG)"; \
+	fi; \
+	cargo run --manifest-path $(LAB_DIR)/Cargo.toml --bin $(BIN) -- "$$@" $(ARGS)

@@ -1,0 +1,4 @@
+[nats]
+subject = "lab4.stream"
+stream  = "LAB4_STREAM"
+consumer = "LAB4_CONSUMER"
