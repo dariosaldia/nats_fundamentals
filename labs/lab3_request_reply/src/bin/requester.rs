@@ -44,7 +44,7 @@ async fn main() -> Result<()> {
         .common
         .subject
         .clone()
-        .or(cfg.subject())
+        .or(cfg.nats.subject)
         .ok_or_else(|| anyhow!("Subject is required. Use --subject or set [nats].subject"))?;
 
     let body = args.msg.or(args.message).unwrap_or_else(|| "ping".into());

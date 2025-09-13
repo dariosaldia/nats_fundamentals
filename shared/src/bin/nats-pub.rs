@@ -35,7 +35,7 @@ async fn main() -> Result<()> {
         .common
         .subject
         .clone()
-        .or(cfg.subject())
+        .or(cfg.nats.subject)
         .ok_or_else(|| {
             anyhow!("Subject is required. Pass --subject or set [nats].subject in config.")
         })?;

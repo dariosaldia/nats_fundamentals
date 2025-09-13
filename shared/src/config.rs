@@ -78,10 +78,6 @@ impl AppConfig {
             .ok_or_else(|| anyhow!("Missing [nats].url in config"))
     }
 
-    pub fn subject(&self) -> Option<String> {
-        self.nats.subject.clone()
-    }
-
     pub fn recv_wait_secs(&self) -> u64 {
         self.recv.wait_secs.unwrap_or(5)
     }
